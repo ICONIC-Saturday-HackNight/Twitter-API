@@ -6,6 +6,11 @@ import Canvas from '../components/Canvas';
 
 export default function Home() {
   const [threadLink, setThreadLink] = useState('');
+  const [apiId, setApiId] = useState('');
+  function handleChange(e) {
+    setThreadLink(e.target.value);
+    console.log(e.target.value);
+  }
   return (
     <div className={styles.container}>
       <Head>
