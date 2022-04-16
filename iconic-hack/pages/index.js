@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import { useState, useEffect } from 'react'
 import Canvas from '../components/Canvas';
 
 export default function Home() {
+  const [threadLink, setThreadLink] = useState('');
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +17,8 @@ export default function Home() {
       <main className={styles.main}>
       {/* <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
       </canvas> */}
-      <Canvas/>
+      <input type="text" key ="textbox" id="text" value={threadLink} onChange={(e)=>{setThreadLink(e.target.value)}}/>
+      <Canvas text ={threadLink}/>
       </main>
 
       

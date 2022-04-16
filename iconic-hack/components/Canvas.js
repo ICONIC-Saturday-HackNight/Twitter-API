@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect, useState } from 'react'
 
-const Canvas = (props,{text="hello1"}) => {
+const Canvas = (props) => {
   
   const canvasRef = useRef(null);
   const linkRef = useRef(null);
@@ -13,10 +13,10 @@ const Canvas = (props,{text="hello1"}) => {
       context.fillRect(0, 0, context.canvas.width, context.canvas.height);
       context.font = "30px Arial";
       context.fillStyle = '#000000';
-      context.fillText(text, 10, 50);
+      context.fillText(props.text, 10, 50);
       setDataUrl(canvas.toDataURL("image/png"));
       console.log(dataURL);
-  }, [text]);
+  }, [props.text]);
   function download() {
     const a = linkRef.current;
       // a.href = "data:image/png;base64," + dataURL; //Image Base64 Goes here
