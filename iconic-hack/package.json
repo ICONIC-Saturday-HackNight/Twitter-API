@@ -9,12 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "fs": "0.0.1-security",
+    "axios": "^0.26.1",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "screenshot-tweet": "^1.0.0",
-    "tweet-shot": "^0.4.0"
+    "twitter-api-client": "^1.5.2"
   },
   "devDependencies": {
     "eslint": "8.13.0",
