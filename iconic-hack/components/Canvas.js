@@ -78,7 +78,7 @@ const Canvas = ({text}) => {
       borderRadius:"30px",
       padding:"10px",
       wordBreak:"break-all",
-      fontSize:"40px",
+      fontSize:"25px",
       }}>
         {data}
         </div></div>
