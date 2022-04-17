@@ -3,6 +3,8 @@ import React, { useRef, useEffect, useState, useCallback } from 'react'
 import axios from 'axios';
 import { toPng } from 'html-to-image';
 import Styles from "./Canvas.module.css";
+import { AppBar, Button, IconButton, Toolbar, Typography , MenuIcon } from '@mui/material';
+
 
 
 const Canvas = ({text}) => {
