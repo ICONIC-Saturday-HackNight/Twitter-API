@@ -26,7 +26,16 @@ const Canvas = ({text}) => {
       console.log(err)
     })
 }, [ref])
-  const BASEURL = 'http://localhost:3000';
+  let BASEURL = 'http://localhost:3000';
+
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    console.log("Developement");
+  } else {
+    console.log("Production");
+    console.log("http://iconic-hack-night.vercel.app/");
+    BASEURL = 'http://iconic-hack-night.vercel.app/';
+  }
+
   const canvasRef = useRef(null);
   const linkRef = useRef(null);
   const [dataURL, setDataUrl] = useState(null);
