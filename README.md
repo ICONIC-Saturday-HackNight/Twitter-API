@@ -1,7 +1,9 @@
 # Tweet to Quote - ICONIC - Saturday HackNight - TinkerHub.
 
 ## Live Demo 
-Link : 
+
+Link : http://iconic-hack-night.vercel.app/
+
 ## Team Details
 
 Team Name : <b>ICONIC</b> <br></br>id: u2CNyVSORCtCmJ80pdH6
@@ -20,7 +22,7 @@ Have you ever seen a tweet and wanted to Quote it as an Image. We have the solut
 
 [Project Diagram](link)
 
-# Steps To run the project:
+# Steps To Run the Project:
 
 ```bash
 git clone https://github.com/jaison080/Iconic-Hacknight
@@ -30,6 +32,6 @@ npm install
 npm run dev
 ```
 
-## Technologies used:
+## Technologies Used:
 
 Next js for Front-End, Twitter API
