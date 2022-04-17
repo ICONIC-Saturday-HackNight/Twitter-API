@@ -60,7 +60,7 @@ const Canvas = ({text}) => {
 
       <button 
         onClick={download}
-        class={Styles.button}
+        className={Styles.button}
         // style={{}}
       >Go
       </button>
@@ -92,7 +92,7 @@ const Canvas = ({text}) => {
           </div>
         </div>
       </div>
-      {data?<button onClick={onButtonClick} class={Styles.button} styles={{marginTop:"20px"}}>Download</button>:null}
+      {data?<button onClick={onButtonClick} className={Styles.button} styles={{marginTop:"20px"}}>Download</button>:null}
     </>
   )
 }
