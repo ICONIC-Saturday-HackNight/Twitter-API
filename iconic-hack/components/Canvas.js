@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import axios from 'axios';
 import { toPng } from 'html-to-image';
+import { AppBar, Button, IconButton, Toolbar, Typography , MenuIcon } from '@mui/material';
 
 
 
@@ -58,7 +59,8 @@ const Canvas = ({text}) => {
      
      
       
-      <button onClick={download}>Go</button>
+      <Button variant="contained" onClick={download}>Go</Button>
+      <br/>
       <div ref = {ref} style={{width:"100% !important"}}>
         <div style = {{
           flexGrow:1, 
@@ -76,12 +78,13 @@ const Canvas = ({text}) => {
       borderRadius:"30px",
       padding:"10px",
       wordBreak:"break-all",
-      fontSize:"40px",
+      fontSize:"25px",
       }}>
         {data}
         </div></div>
       </div>
-      {data?<button onClick={onButtonClick}>Download</button>:null}
+      <br/>
+      {data?<Button variant="contained" onClick={onButtonClick}>Download</Button>:null}
     </>
   )
 }
