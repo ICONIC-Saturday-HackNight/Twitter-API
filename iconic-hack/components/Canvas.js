@@ -56,7 +56,7 @@ const Canvas = ({text}) => {
     axios.get(`${BASEURL}/api/tweet/${_Id}`)
     .then(response => {
         // If request is good...
-       setData(response.data.text.data.text);
+       setData(response.data.text.data.text.replaceAll("&amp;", "&"));
       })
     .catch((error) => {
         console.log('error ' + error);
