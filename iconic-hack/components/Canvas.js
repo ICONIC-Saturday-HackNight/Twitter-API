@@ -32,8 +32,8 @@ const Canvas = ({text}) => {
     console.log("Developement");
   } else {
     console.log("Production");
-    console.log("http://iconic-hack-night.vercel.app/");
-    BASEURL = 'http://iconic-hack-night.vercel.app/';
+    console.log("https://iconic-hack-night.vercel.app/");
+    BASEURL = 'https://iconic-hack-night.vercel.app/';
   }
 
   const canvasRef = useRef(null);
