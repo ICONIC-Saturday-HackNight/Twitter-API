@@ -22,15 +22,24 @@ export default function Home() {
       </Head>
 
       <AppBar position="static">
-      <Toolbar variant="dense">
-        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-    </IconButton>
-    <MenuIcon/>
-    <Typography variant="h6" color="inherit" align-items="center" component="div">
-      Tweet to Quote
-    </Typography>
-  </Toolbar>
-</AppBar>
+        <Toolbar 
+          variant="dense" 
+          align-items="center" 
+          style={{
+            display:"flex",
+            alignContent: "center",
+            justifyContent: "center",
+            alignItems: "center",
+            width:"100%",
+          }}>
+          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+          </IconButton>
+          <MenuIcon/>
+          <Typography variant="h6" color="inherit" align-items="center" component="div">
+            Tweet to Quote
+          </Typography>
+          </Toolbar>
+      </AppBar>
 
       <main className={styles.main}>
       {/* <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">

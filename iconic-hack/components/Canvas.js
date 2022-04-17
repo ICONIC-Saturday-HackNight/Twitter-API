@@ -92,6 +92,7 @@ const Canvas = ({text}) => {
           </div>
         </div>
       </div>
+      <br/>
       {data?<button onClick={onButtonClick} className={Styles.button} styles={{marginTop:"20px"}}>Download</button>:null}
     </>
   )
