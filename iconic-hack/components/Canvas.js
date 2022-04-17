@@ -32,8 +32,8 @@ const Canvas = ({text}) => {
     console.log("Developement");
   } else {
     console.log("Production");
-    console.log("http://iconic-hack-night.vercel.app/");
-    BASEURL = 'http://iconic-hack-night.vercel.app/';
+    console.log("https://iconic-hacknight.vercel.app/");
+    BASEURL = 'https://iconic-hacknight.vercel.app/';
   }
 
   const canvasRef = useRef(null);
@@ -75,7 +75,9 @@ const Canvas = ({text}) => {
       </button>
 
       <div ref = {ref} style={{width:"40% !important"}}>
+      {data?(
         <div style = {{
+          // width:"40% !important",
           flexGrow:1, 
           display: 'flex',  
           justifyContent: 'center', 
@@ -100,7 +102,13 @@ const Canvas = ({text}) => {
             {data}
           </div>
         </div>
+      ):
+      (<Typography variant="h6" color="inherit" align-items="center" component="div"sx={{ mb: 2 }}>
+        Enter a Tweet URL to download it as an image instantly!
+      </Typography>)
+      }
       </div>
+      
       <br/>
       {data?<button onClick={onButtonClick} className={Styles.button} styles={{marginTop:"20px"}}>Download</button>:null}
     </>
