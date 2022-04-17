@@ -20,7 +20,11 @@ Have you ever seen a tweet and wanted to Quote it as an Image. We have the solut
 
 ## 🔧 Project UI:
 
-[Project Diagram](link)
+![Project Diagram](https://github.com/jaison080/Iconic-HackNight/blob/master/images/img1.png)
+
+## 🔧 Project Output:
+
+![Project Output](https://github.com/jaison080/Iconic-HackNight/blob/master/images/img.png)
 
 # Steps To Run the Project:
 
