@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import axios from 'axios';
 import { toPng } from 'html-to-image';
-
+import Styles from "./Canvas.module.css";
 
 
 const Canvas = ({text}) => {
@@ -55,33 +55,42 @@ const Canvas = ({text}) => {
   }
   return (
     <>
-     
-     
-      
-      <button onClick={download}>Go</button>
-      <div ref = {ref} style={{width:"100% !important"}}>
+
+      <button 
+        onClick={download}
+        class={Styles.button}
+        // style={{}}
+      >Go
+      </button>
+
+      <div ref = {ref} style={{width:"40% !important"}}>
         <div style = {{
           flexGrow:1, 
           display: 'flex',  
           justifyContent: 'center', 
           alignItems: 'center',
-         
-
+          background: "linear-gradient(45deg, #ffb56b, #ffae79, #ffa888, #ffa498, #ffa2a8, #ffa2b7, #fba4c4, #efa6d0, #e1aad8, #d2adde)",
+          padding: "35px"
+        }}>
+          <div style={{
+            width: '90%', 
+            height: '90%', 
+            // backgroundColor: '#fff', 
+            boxShadow: "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px",
+            // boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+            // border:"1px solid #000",
+            background:"white",
+            borderRadius:"30px",
+            padding:"10px",
+            wordBreak:"break-word",
+            textAlign: "center",
+            fontSize:"26px",
           }}>
-      <div style={{
-      width: '70%', 
-      height: '100%', 
-      backgroundColor: '#fff', 
-      border:"1px solid #000",
-      borderRadius:"30px",
-      padding:"10px",
-      wordBreak:"break-all",
-      fontSize:"40px",
-      }}>
-        {data}
-        </div></div>
+            {data}
+          </div>
+        </div>
       </div>
-      {data?<button onClick={onButtonClick}>Download</button>:null}
+      {data?<button onClick={onButtonClick} class={Styles.button} styles={{marginTop:"20px"}}>Download</button>:null}
     </>
   )
 }

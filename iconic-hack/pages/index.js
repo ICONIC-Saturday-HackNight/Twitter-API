@@ -22,7 +22,36 @@ export default function Home() {
       <main className={styles.main}>
       {/* <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
       </canvas> */}
-      <input type="text" key ="textbox" id="text" value={threadLink} onChange={(e)=>{setThreadLink(e.target.value)}}/>
+      <h1>Iconic Twitter Downloader</h1>
+      <h3>Download Tweets as beautiful images instantly!</h3>
+      <div
+        style={{
+          display:"flex",
+          alignContent: "center",
+          alignItems: "center",
+          justifyContent: "space-around",
+        }}
+      >
+        <h5
+          style={{
+            padding: "10px"
+          }}
+        >
+          Enter Tweet Url here:
+        </h5>
+        <input 
+          type="text"
+          key ="textbox"
+          id="text" 
+          value={threadLink} 
+          onChange={(e)=>{setThreadLink(e.target.value)}}
+
+          style={{
+            padding: "10px",
+            height:"30px"
+          }}
+        />
+      </div>
       
       <Canvas text ={threadLink}/>
       </main>
