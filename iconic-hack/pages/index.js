@@ -44,7 +44,6 @@ export default function Home() {
       <main className={styles.main}>
       {/* <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
       </canvas> */}
-
       <TextField id="outlined-basic" label="Enter Tweet Link" variant="outlined" key ="textbox" value={threadLink} onChange={(e)=>{setThreadLink(e.target.value)}}/>
       <br/>
       <Canvas text ={threadLink}/>
